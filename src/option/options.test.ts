@@ -1,19 +1,20 @@
-import {
-  // composed, composed2, divideTwo, divideTwo2, isNone, none, some
-} from "./options"
+// import {
+//   composed, composed2, divideTwo, divideTwo2, isNone, none, some
+// } from "./options"
+import { composed, divideTwo } from "./options"
 
 describe('Options', () => {
   it('should divide 2 with number that not zero', () => {
-    // expect(divideTwo(2)).toEqual(1)  
+    expect(divideTwo(2)).toEqual(1)  
   })
 
   it('should not be able divide 2 with zero', () => {
-    // expect(divideTwo(0)).toEqual(Infinity)
+    expect(divideTwo(0)).toEqual(Infinity)
   })
 
   it('should compose divideTwo with increment', () => {
-    // expect(composed(2)).toEqual(2)
-    // expect(composed(0)).toEqual(Infinity)
+    expect(composed(2)).toEqual(2)
+    expect(composed(0)).toEqual(Infinity)
   })
 
   it('should convert any type of A to Some of type A', () => {

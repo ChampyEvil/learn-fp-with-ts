@@ -14,6 +14,8 @@ describe('Compose in FP', () => {
   })
 
   it('should compose toString after increment', () => {
-    expect(compose(toString, increment)(1)).toBe('2')
+    // expect(compose(toString, increment)(1)).toBe('2')
+    const c = compose(toString, increment)
+    expect(c(1)).toBe('2')
   })
 })

@@ -7,7 +7,11 @@ const toString: ToString = x => `${x}`
 type IncrementThenToString = (x: number) => string
 const incrementThenToString: IncrementThenToString = x => toString(increment(x))
 
-type Compose = (g: (x: number) => string, f: (x:number) => number) => (x: number) => string
-const compose: Compose = (g, f) => (x: number) => g(f(x))
+// type Compose = (g: (x: number) => string, f: (x:number) => number) => (x: number) => string
+type Compose = <N, S>(
+    g: (x: N) => S,
+    f: (x: N) => N
+) => (x: N) => S
+const compose: Compose = (g, f) => (x) => g(f(x))
 
 export { increment, toString, incrementThenToString, compose }

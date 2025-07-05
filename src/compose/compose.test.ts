@@ -1,5 +1,4 @@
-// import { compose, increment, incrementThenToString, toString } from "./compose"
-import { increment, toString } from "./compose"
+import { compose, increment, incrementThenToString, toString } from "./compose"
 
 describe('Compose in FP', () => {
   it('should increment number', () => {
@@ -11,10 +10,10 @@ describe('Compose in FP', () => {
   })
 
   it('should increment then convert number to string', () => {
-    // expect(incrementThenToString(1)).toBe('2')
+    expect(incrementThenToString(1)).toBe('2')
   })
 
   it('should compose toString after increment', () => {
-    // expect(compose(toString, increment)(1)).toBe('2')
+    expect(compose(toString, increment)(1)).toBe('2')
   })
 })
